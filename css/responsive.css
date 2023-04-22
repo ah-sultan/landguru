@@ -1,0 +1,991 @@
+/* `xxl` applies to x-large devices (large desktops, less than 1400px) */
+@media (max-width: 1399.98px) {}
+
+/* max-width 1400px */
+
+
+/* `xl` applies to large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+
+    .pt-180 {
+        padding-top: 12rem;
+    }
+
+    .banner::before,
+    .banner::after {
+        background-size: 50%;
+    }
+
+    /* Feature Section */
+    .features .content-section {
+        column-gap: 0;
+        padding-left: 0;
+        justify-content: space-evenly;
+    }
+
+    .features .content-section .feature-card {
+        width: 32rem;
+        margin-top: 7rem;
+    }
+
+    .features .content-section .feature-card .card-title {
+        margin-bottom: 2.4rem;
+    }
+
+    .features .content-section .feature-card .card-peragraph {
+        max-width: 25rem;
+    }
+
+
+    /* Services Section */
+
+    .services .content-section {
+        padding: 0 3rem;
+    }
+
+    .services .content-section .play-btn {
+        right: inherit;
+        transform: translate(-50%, -50%);
+        left: 50%;
+    }
+
+    .services .content-section .bg-shape {
+        bottom: -6.6rem;
+        right: 29.5rem;
+        max-width: 28rem;
+    }
+
+    .services .text-section {
+        padding: 0;
+    }
+
+    .services .text-section .heading {
+        font-size: 4rem;
+        line-height: 5.2rem;
+        margin-bottom: 5.5rem;
+    }
+
+    .services .card-section {
+        padding-left: 0;
+    }
+
+    .services .card-section .services-card {
+        width: 100%;
+        margin-bottom: 4rem;
+    }
+
+    /* All Features */
+    .all-feature .card-section {
+        padding: 6.4rem 5rem 0;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 6rem 6rem;
+    }
+
+    /* co-feature Section */
+    .co-feature {
+        overflow: inherit;
+    }
+
+    .co-feature .content-section {
+        padding: 0;
+    }
+
+    .peragraph {
+        line-height: 3.2rem;
+    }
+
+    .co-feature .img-section {
+        padding: 0 2rem;
+    }
+
+    .co-feature .img-section .bg-shape {
+        right: -2rem;
+        bottom: -4.9rem;
+        max-width: 25rem;
+    }
+
+    /* How Works */
+    .how-works {
+        margin-top: 15rem;
+    }
+
+
+    .how-works .card-section {
+        justify-content: center;
+    }
+
+    .how-works .how-works-card {
+        margin: 13.2rem auto 0;
+    }
+
+    .how-works .how-works-card .card-shape .bottom-shape,
+    .how-works .how-works-card .card-shape .top-shape {
+        display: none;
+    }
+
+    .pricing .plan-catagory .card-section .price-card {
+        max-width: 93%;
+    }
+
+      /* footer section */
+
+    .footer .card-section .footer-card {
+        margin-top: 10.4rem;
+        max-width: 26rem;
+    }
+
+
+}
+
+/* max-width 1200px*/
+
+
+
+/* `lg` applies to medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+    .pt-180 {
+        padding-top: 10rem;
+    }
+
+    .lg-mx-auto {
+        margin: 0 auto;
+    }
+
+    .heading {
+        font-size: 2.8rem;
+        line-height: 3.6rem;
+    }
+
+    .peragraph {
+        font-size: 1.8rem;
+        line-height: 3.2rem;
+        margin: 2rem 0;
+    }
+
+    .card-icon img {
+        width: 7rem;
+    }
+
+    .card-peragraph {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+    }
+
+    /* Navbar Section */
+
+    .navbar .navbar-collapse{
+        visibility: hidden;
+        background: #ffffff;
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        width: 0;
+        box-shadow: 2px 6px 8px rgba(0, 0, 0, 0.231);
+        z-index: 999;
+        transition: 0.4s;
+        overflow-x: hidden;
+        
+    }
+
+
+
+    .navbar .navbar-collapse .nav-closer{
+        display: block;
+    }
+ 
+    .navbar .navbar-collapse .navbar-nav .nav-item {
+        margin: 0 4rem;
+        padding: 1.5rem 0;
+        border-bottom: 1px solid rgb(232, 229, 229);
+    }
+
+    .navbar .navbar-collapse .navbar-nav .nav-item .dropdown-nav{
+        position: static;
+        padding: 0;
+        width: 100%;
+        visibility: hidden;
+        height: 0;
+    }
+
+    .navbar .navbar-collapse .navbar-nav .nav-item .dropdown-nav::before{
+        padding: 0;
+        content: none;
+    }
+
+    .navbar .navbar-collapse .navbar-nav .nav-item .dropdown-nav .nav-menu{
+        padding: 0 3rem;
+        background: transparent;
+        box-shadow: none;
+    }
+  
+    .navbar .nav-open-btn{
+        display: block;
+    }
+
+
+    /* Banner Section */
+    .banner .header-section .banner-heading {
+        max-width: 42rem;
+        font-size: 4.2rem;
+        line-height: 5.4rem;
+    }
+
+    /* Features */
+    .features .header-section {
+        padding-top: 1rem;
+    }
+
+    .features .content-section {
+        justify-content: space-between;
+        column-gap: 0;
+    }
+
+    .features .content-section .feature-card {
+        width: 30rem;
+        margin-top: 5rem;
+    }
+
+    .features .content-section .feature-card .card-title {
+        margin-bottom: 1.5rem;
+    }
+
+    .features .content-section .feature-card .card-peragraph {
+        max-width: 32.4rem;
+    }
+
+    /* Service Section */
+    .services .content-section {
+        padding-left: 0;
+        padding-right: 1rem;
+    }
+
+    .services .content-section .bg-shape {
+        display: none;
+    }
+
+    .services .text-section {
+        padding-left: 0;
+        padding-top: 0;
+    }
+
+    .services .text-section .sub-heading {
+        padding-bottom: 0;
+        line-height: 2rem;
+    }
+
+    .services .text-section .heading {
+        font-size: 2.4rem;
+        line-height: 3.9rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .services .card-section {
+        padding-left: 0;
+    }
+
+    .services .card-section .services-card {
+        width: 100%;
+        column-gap: 1.8rem;
+        margin-bottom: 2.8rem;
+    }
+
+    .services .card-section .services-card .card-title {
+        margin-bottom: 1rem;
+    }
+
+    .services .card-section .services-card .card-peragraph {
+        font-size: 1.5rem;
+        line-height: 2.4rem;
+    }
+
+    .all-feature .card-section {
+        padding: 6rem 5.5rem 0 9.5rem;
+    }
+
+    .all-feature .card-section {
+        padding: 6rem 0 0;
+        grid-template-columns: auto auto;
+    }
+
+    .all-feature .card-section .card-title {
+        margin-bottom: 1rem;
+        line-height: 3rem;
+    }
+
+    /* Co-features Section */
+    .co-feature {
+        overflow: hidden;
+    }
+
+    .co-feature .content-section {
+        padding: 0;
+    }
+
+    .co-feature .content-section .heading {
+        max-width: 100%;
+        font-size: 2.8rem;
+    }
+
+    .co-feature .img-section .bg-shape {
+        right: -6.9rem;
+        bottom: -4.9rem;
+        max-width: 25rem;
+    }
+
+    /* How Works Section */
+
+    .how-works .how-works-card .card-shape .bottom-shape,
+    .how-works .how-works-card .card-shape .top-shape {
+        display: none;
+    }
+
+    /* Pricin Section */
+    .pricing .plan-catagory .card-section .price-card {
+        max-width: 90%;
+        margin-left: auto;
+    }
+
+    
+    /* team section */
+
+    .team .team-card .staf-info .staf-name {
+        margin-bottom: 0;
+    }
+
+    .team .team-card .staff-social, 
+    .team .team-card:hover .staff-social {
+        transform: translateY(1);
+        visibility: visible !important;
+        position: static !important;
+        display: block !important;
+        text-align: center;
+        width: 100%;
+        margin-top: 1.5rem;
+        background: transparent;
+        height: 100%;
+    }
+    .team .team-card .staff-social .social-links {
+        margin-top: 0;
+        display: inline-block;
+        margin: 0 0.5rem;
+    }
+
+    /* Testimonial Start */
+
+    .testimonial .content-section .testimonial-card {
+        margin: 2rem 1rem;
+    }
+
+
+    /* Blog */
+    .blog .content-section .slick-center{
+        transition: 0.5s;
+        transform: scale(1);
+        margin-top: 2rem;
+    }
+
+}
+
+/* max-width 992px */
+
+
+
+/* `md` applies to small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+
+
+    .heading {
+        font-size: 2.8rem;
+        line-height: 3.6rem;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 0 3rem;
+    }
+
+    .pt-180 {
+        padding-top: 10rem;
+    }
+
+    .navbar .navbar-btn .btn {
+        padding: 1rem 2.4rem;
+    }
+
+    .navbar .register-box {
+        top: 1.6rem;
+        transform: translate(-50%, 0);
+    }
+
+    /* Banner Section */
+    .banner .header-section {
+        padding-top: 11rem;
+    }
+
+    .banner .header-section .banner-heading {
+        max-width: 42rem;
+        font-size: 4.2rem;
+        line-height: 5.5rem;
+    }
+
+    .banner::before,
+    .banner::after {
+        background-size: 43%;
+    }
+
+    /* Feature Section */
+    .features .header-section {
+        padding-top: 8rem;
+    }
+
+    .features .content-section {
+        display: flex;
+        column-gap: 6rem;
+        padding-left: 0;
+        justify-content: center;
+    }
+
+    .features .content-section .feature-card {
+        width: 26.5rem;
+        margin-top: 6rem;
+    }
+
+    /* Services Section */
+    .services .content-section .bg-shape {
+        display: none;
+    }
+
+    .services .text-section {
+        padding-top: 8rem;
+        text-align: center;
+    }
+
+    .services .text-section .sub-heading {
+        padding-bottom: 0;
+    }
+
+    .services .text-section .heading {
+        font-size: 2.8rem;
+        line-height: 3.6rem;
+
+    }
+
+    .services .card-section {
+        padding-left: 0rem;
+        padding-top: 4rem;
+    }
+
+    .services .card-section .services-card {
+        margin: 0 auto 4rem;
+        width: 40rem;
+    }
+
+    /* All-Features */
+    .all-feature .card-section {
+        padding: 6.4rem 0 0;
+        grid-template-columns: 40rem;
+        justify-content: center;
+    }
+
+    /* Co-Features */
+    .co-feature .content-section {
+        padding: 0;
+        text-align: center;
+    }
+
+    .co-feature .content-section .heading {
+        max-width: 100%;
+        font-size: 2.8rem;
+        margin: 0 auto;
+        padding: 0px 7rem;
+    }
+
+    .peragraph {
+        line-height: 3.6rem;
+        margin: 3rem 0 2rem;
+    }
+
+    .co-feature .img-section {
+        display: block;
+        text-align: center;
+        margin-top: 6rem;
+    }
+
+    .co-feature .img-section .bg-shape {
+        display: none;
+    }
+
+    /* How Works */
+    .how-works {
+        margin-top: 10rem;
+
+    }
+
+    .how-works .how-works-card {
+        max-width: 26.3rem;
+        margin-left: 1rem;
+        margin: 6.4rem 0 0 1rem;
+    }
+
+    .how-works .how-works-card .card-shape .bottom-shape,
+    .how-works .how-works-card .card-shape .top-shape {
+        display: none;
+    }
+
+    /* Tesimonial Section */
+
+    .testimonial .content-section .testimonial-card {
+        margin: 2rem 0;
+    }
+    /* Pricing Section */
+
+    .pricing .plan-catagory .card-section .price-card {
+        max-width: 35rem;
+    }
+    /* Blog Section */
+    .blog {
+        padding-bottom: 8rem;
+    }
+
+    .blog .content-section .blog-card {
+        max-width: 42rem;
+        margin: 2.5rem auto;
+    }
+
+    /* Newsletter Section */
+    .newsletter .newsletter-section .form-section .from-box {
+        width: 100%;
+    }
+
+    .newsletter .newsletter-section {
+        padding: 6rem 4rem;
+
+    }
+
+    /* Footer Section */
+
+    .footer .card-section .footer-card {
+        margin-top: 3.4rem;
+        max-width: 36.8rem;
+    }
+
+    .footer .card-section {
+        padding-bottom: 6.4rem;
+    }
+
+    .footer .contact-section {
+        padding-bottom: 5.6rem;
+    }
+
+}
+
+/* max-width 768px */
+
+
+
+/* `sm` applies to x-small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+
+    .sub-heading {
+        line-height: 2.4rem;
+    }
+
+    .heading {
+        font-size: 2.4rem;
+        line-height: 3.2rem;
+    }
+
+    .peragraph {
+        font-size: 1.8rem;
+        line-height: 3.2rem;
+        margin: 3rem 0 3rem;
+    }
+
+    .pt-180 {
+        padding-top: 10rem;
+    }
+
+    .container {
+        padding: 0 3rem;
+    }
+
+    .navbar .navbar-brand img{
+        width: 12rem;
+    }
+
+    .navbar .navbar-btn .btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 1.4rem;
+    }
+
+    .navbar .register-box {
+        width: 30rem;
+        max-width: 97%;
+
+    }
+
+    /* Banner Section */
+    .banner .header-section {
+        padding-top: 5.6rem;
+    }
+
+    .banner .header-section .banner-heading {
+        font-size: 4rem;
+        line-height: 5.6rem;
+    }
+
+    .banner .header-section .banner-peragraph {
+        font-size: 1.8rem;
+        line-height: 2.4rem;
+    }
+
+    .banner .img-section .right-shape,
+    .banner .img-section .left-shape {
+        display: none;
+    }
+
+    .banner::before {
+        bottom: 4rem;
+    }
+
+    /* Feature Section */
+
+    .features .header-section {
+        padding-top: 7rem;
+    }
+
+    .features .content-section .feature-card .card-title {
+        margin-bottom: 2.4rem;
+    }
+
+    .features .content-section {
+        flex-direction: row;
+        column-gap: 0;
+        padding-left: 0;
+        justify-content: center;
+    }
+
+    .features .content-section .feature-card {
+        width: 26.5rem;
+        margin-top: 7.2rem;
+        text-align: center;
+    }
+
+    .features .content-section .feature-card .card-peragraph {
+        max-width: 23rem;
+        margin: 0 auto;
+    }
+
+    /* Service Section */
+
+    .services .content-section {
+        padding-left: 0;
+    }
+
+    .services .content-section .play-btn {
+        right: inherit;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        width: 8rem;
+        height: 8rem;
+    }
+
+    .services .content-section .play-btn span i {
+        font-size: 3.6rem;
+    }
+
+    .services .text-section {
+        padding-left: 0;
+        padding-top: 7.2rem;
+    }
+
+    .services .text-section .sub-heading {
+        padding-bottom: 1rem;
+        text-align: center;
+    }
+
+    .services .text-section .heading {
+        font-size: 2.4rem;
+        line-height: 3.2rem;
+        margin-bottom: 5.5rem;
+        text-align: center;
+    }
+
+    .services .card-section {
+        padding: 0;
+    }
+
+    .services .card-section .services-card {
+        width: 100%;
+    }
+
+    /*  all-feature Section */
+
+    .all-feature .card-section {
+        padding: 7.2rem 0 0;
+        grid-template-columns: 100%;
+        grid-gap: 40px 0;
+    }
+
+    .card-peragraph {
+        line-height: 2.4rem;
+    }
+
+    /* Co-feature Section */
+    .co-feature .content-section {
+        padding: 0;
+        text-align: center;
+    }
+
+    .co-feature .content-section .heading {
+        max-width: 100%;
+        font-size: 2.4rem;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .co-feature .content-section .peragraph {
+        margin: 3rem auto 3rem;
+        max-width: 42.5rem;
+    }
+
+    .co-feature .img-section {
+        padding: 7.2rem 0;
+    }
+
+    /* How Works Section */
+
+    .how-works {
+        margin-top: 7rem;
+    }
+
+    .how-works .how-works-card {
+        max-width: 26.3rem;
+        margin-left: 1rem;
+        margin: 4rem auto 0;
+        text-align: center;
+    }
+
+    .how-works .how-works-card .card-number {
+        margin: 0 auto;
+    }
+
+    .how-works .how-works-card .card-shape .top-shape {
+        display: none;
+    }
+
+    .position-absolute {
+        display: none;
+    }
+
+    /* Testimonial Section */
+
+    .testimonial .content-section .testimonial-card {
+        margin: 3rem 0.7rem;
+    }
+
+    .testimonial .content-section .carosel-btn {
+        margin-top: 0;
+    }
+
+    /* BLog Section */
+    .blog {
+        padding-bottom: 10rem;
+    }
+
+    .blog .content-section .blog-card {
+        max-width: 40rem;
+        margin: 8rem auto 0;
+    }
+
+    /* Newsletter Section */
+    /* Newsletter section */
+    .newsletter .newsletter-section {
+        padding: 6rem 2rem 10rem;
+    }
+
+    .newsletter .newsletter-section .header-section .peragraph {
+        max-width: 100%;
+        line-height: 3.2rem;
+        margin: 3rem auto 4rem;
+    }
+
+    .newsletter .newsletter-section .form-section .from-box input,
+    .newsletter .newsletter-section .form-section .from-box input::placeholder {
+        padding: 1rem 2rem;
+    }
+
+    .newsletter .newsletter-section .form-section .from-box .submit-btn {
+        position: absolute;
+        padding: 1.3rem 2rem;
+        right: 0;
+        left: 0;
+        top: 5rem;
+        transform: none;
+        background: #02073E;
+        width: 100%;
+    }
+
+
+    /* Footer Section */
+    .footer .card-section .footer-card {
+        margin-top: 5.6rem;
+        max-width: 32rem;
+    }
+
+    .footer .card-section {
+        padding-bottom: 6.4rem;
+    }
+
+    .footer .contact-section {
+        padding: 4.3rem 0;
+    }
+
+}
+
+/* max-width 576px */
+
+
+/* `extra small` applies to xs-small devices (small phones, less than 360pxpx) */
+@media (max-width: 360px) {
+
+    .container {
+        max-width: 100%;
+        padding: 0 1.5rem;
+    }
+
+    .pt-180 {
+        padding-top: 8rem;
+    }
+
+    .card-icon img {
+        width: 5rem;
+    }
+
+    .card-peragraph {
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+    }
+
+    /* Banner Section */
+    .banner .header-section {
+        padding-top: 6rem;
+    }
+
+    .banner .header-section .banner-heading {
+        max-width: 100%;
+        font-size: 3.2rem;
+        line-height: 4.2rem;
+    }
+
+    .banner .header-section .banner-peragraph {
+        font-size: 1.6rem;
+        line-height: 3rem;
+        max-width: 100%;
+    }
+
+    .banner .header-section .btn {
+        padding: 1.2rem 2.4rem;
+        color: #ffffff;
+    }
+
+    .banner::before,
+    .banner::after {
+        background-size: 36%;
+    }
+
+    .banner::before {
+        bottom: 3.2rem;
+    }
+
+    /* Feature Section */
+
+    .features .content-section .feature-card {
+        width: 100%;
+        margin-top: 3.2rem;
+    }
+
+    /* Services Section */
+    .services .card-section {
+        padding: 0;
+    }
+
+    .services .card-section .services-card .card-peragraph {
+        line-height: 2.2rem;
+    }
+
+    .services .content-section .play-btn {
+        top: 50%;
+        right: 50%;
+        transform: translate(-50%, -50%);
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .services .content-section .play-btn span i {
+        font-size: 2.4rem;
+    }
+
+    /* All-Features */
+    .all-feature .card-section {
+        padding: 0;
+        padding-top: 3.2rem;
+    }
+
+    .all-feature .card-icon img {
+        width: 6rem;
+    }
+
+    /* co-features */
+
+    .co-feature .content-section .heading {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .co-feature .content-section .btn {
+        background: #EA3A60;
+        color: #ffffff;
+        padding: 1.2rem 2.2rem;
+    }
+
+    .co-feature .img-section {
+        margin-top: 0;
+    }
+
+    .how-works {
+        padding: 6rem 0;
+    }
+
+    .team .card-section .col-6 {
+        width: 100%;
+    }
+
+    /* Testimonial */
+    .testimonial .content-section {
+        padding-top: 1rem;
+    }
+
+    .testimonial .content-section .testimonial-card {
+        margin: 3rem 0;
+    }
+
+    .testimonial .content-section .testimonial-card {
+        padding: 3rem 2rem;
+    }
+
+    .testimonial .content-section .testimonial-card .rivew-text {
+        font-size: 1.5rem;
+        line-height: 3rem;
+    }
+
+
+    /* Footer Section */
+    .footer .contact-section .footer-menu .menu-list .menu-item {
+        display: block;
+    }
+}
+
+/* max-width 360px */
