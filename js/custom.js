@@ -1,6 +1,17 @@
 const docBody = document.getElementById('doc-body')
 
 
+// Preloader 
+// $(window).load(function() {
+//   $('#prloader').fadeOut(100);
+// });
+
+$(window).on('load', function() {
+  $('#prloader').delay(1000).fadeOut('slow', function() {
+    $(this).remove();
+  });
+});
+
 // Navbar Section Start
 const navOpenBtn = document.getElementById('nav-open-btn')
 const navCloseBtn = document.getElementById('nav-close-btn')
@@ -23,6 +34,25 @@ navCloseBtn.addEventListener('click', function () {
   navbarWraper.style.width = '0'
   docBody.classList.remove('black-mask')
 })
+
+// Sticky Navbar
+
+$(window).bind('scroll', function () {
+  if ($(window).scrollTop() > 30) {
+      $('#navbar').addClass('sticky-nav');
+  } else {
+      $('#navbar').removeClass('sticky-nav');
+  }
+});
+
+// Sub Navtoggler
+
+function subNavToggler(id){
+  event.preventDefault()
+  const navItem = document.getElementById(id)
+  navItem.classList.toggle('showSubnav')
+
+}
 
 // Navbar Section End
 
@@ -76,6 +106,23 @@ signInHereBtn.addEventListener('click', function () {
 
 })
 
+// Service Section
+
+new VenoBox({
+  selector: '.service-video',
+  maxWidth : '90%',
+  spinColor : 'red',
+  spinner : 'wave'
+});
+
+new VenoBox({
+  selector: '.my-image-links',
+  numeration: true,
+  infinigall: true,
+  share: true,
+  spinner: 'rotating-plane'
+});
+
 // Pricing Section Start
 const monthlyPlanCard = document.getElementById('monthly-plan')
 const annualPlanCard = document.getElementById('annual-plan')
@@ -103,33 +150,52 @@ annualBtn.addEventListener('click', function () {
   annualPlanCard.classList.add('show-plan-card')
 });
 
-// Service Section
 
-new VenoBox({
-  selector: '.service-video',
-  maxWidth : '90%',
-  spinColor : 'red',
-  spinner : 'wave'
-});
+// pricing Slider
 
-new VenoBox({
-  selector: '.my-image-links',
-  numeration: true,
-  infinigall: true,
-  share: true,
-  spinner: 'rotating-plane'
-});
+$('.pricing-slider').slick({
 
-// Banner Slider
-
-$('.slider-hero').slick({
-
-  slidesToShow: 1,
+  infinite: true,
+  slidesToShow: 3,
   slidesToScroll: 1,
-  prevArrow: '<i class="fa fa-chevron-circle-left banner-slider-prev" aria-hidden="true"></i>',
-  nextArrow: '<i class="fa fa-chevron-circle-right banner-slider-next" aria-hidden="true"></i>',
-  autoplay: true
-});
+
+  responsive: [{
+      breakpoint: 991,
+      settings: {
+        arrows: false,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        dots: true,
+        centerPadding : '0px'
+
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        dots: true,
+      }
+    },
+
+    {
+      breakpoint: 575,
+      settings: {
+        arrows: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+      }
+    },
+  ]
+
+
+})
+
+
+
 
 // Team Slider Section
 
@@ -142,7 +208,7 @@ $('.team-slider').slick({
 
   responsive: [
     {
-      breakpoint: 991,
+      breakpoint: 776,
       settings: {
         arrows: false,
         slidesToShow: 2,
@@ -151,13 +217,11 @@ $('.team-slider').slick({
       }
     },
     {
-      breakpoint: 480,
+      breakpoint: 575,
       settings: {
         arrows: false,
-        centerMode: true,
         dots : true,
-        centerPadding: '40px',
-        slidesToShow: 1
+        slidesToShow: 2
       }
     }
   ]
@@ -190,6 +254,16 @@ $('.testimonial-slider').slick({
     breakpoint: 768,
     settings: {
       arrows: false,
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      dots: true,
+    }
+  },
+
+  {
+    breakpoint: 575,
+    settings: {
+      arrows: false,
       slidesToShow: 1,
       slidesToScroll: 1,
       dots: true,
@@ -200,38 +274,6 @@ $('.testimonial-slider').slick({
 });
 
 
-// pricing Slider
-
-$('.pricing-slider').slick({
-
-  infinite: true,
-  slidesToShow: 3,
-  slidesToScroll: 1,
-
-  responsive: [{
-      breakpoint: 991,
-      settings: {
-        arrows: false,
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        dots: true,
-        centerPadding : '0px'
-
-      }
-    },
-    {
-      breakpoint: 768,
-      settings: {
-        arrows: false,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: true,
-      }
-    }
-  ]
-
-
-})
 
 // Blog Slider 
 
@@ -247,7 +289,7 @@ $('.blog-slider').slick({
   centerPadding: '1px',
 
   responsive: [{
-    breakpoint: 991,
+    breakpoint: 992,
     settings: {
       arrows: false,
       slidesToShow: 2,
@@ -266,4 +308,18 @@ $('.blog-slider').slick({
     }
   }
 ]
+})
+
+$(window).on('scroll', function(){
+
+  if($(window).scrollTop() > 20){
+   $('#backTopBtn').css('transform', 'scale(1)')
+  }else{
+    $('#backTopBtn').css('transform', 'scale(0)')
+  }
+}
+)
+$("#backTopBtn").click(function scrollTopAnimated() {
+  $("html, body").animate(
+      { scrollTop: "0" }, 1000);
 })

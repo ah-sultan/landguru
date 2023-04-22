@@ -13,11 +13,11 @@
     <!-- Fontawsome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <!-- Slick Slider CSS -->
-    <link rel="stylesheet" href="./css/slick.css">
+    <link rel="stylesheet" href="./css/vendor/slick.css">
     <!-- Venu Box Min CSS -->
-    <link rel="stylesheet" href="./css/venobox.min.css">
+    <link rel="stylesheet" href="./css/vendor/venobox.min.css">
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css//vendor/bootstrap.min.css">
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="./css/style.css">
     <!-- Responsive Css -->
@@ -25,8 +25,24 @@
 </head>
 
 <body id="doc-body" class="">
+
+    <!-- Preloader Start -->
+    <div id="prloader" class="d-flex justify-content-center align-items-center">
+        <ul class="d-flex justify-content-center align-items-center column-gap-3 prloader-list">
+            <li>L</li>
+            <li>A</li>
+            <li>N</li>
+            <li>D</li>
+            <li>G</li>
+            <li>U</li>
+            <li>R</li>
+            <li>U</li>
+        </ul>
+    </div>
+    <!-- Preloader End -->
+
     <!-- Navbar Section Start -->
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg" id="navbar">
         <div class="container position-relative">
             <!-- Navbar Logo -->
             <a class="navbar-brand" href="#">
@@ -43,65 +59,13 @@
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                     <li class="nav-item position-static">
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        <div class="home-mega-menu">
-                            <div class="mega-menu-container">
-                                <a href="#" class="mega-menu-item">
-                                    <img src="./img/navbar/mega-menu-img/home01.png" alt="home-img" class="img-fluid">
-                                    <span class="item-title">Events Organizer</span>
-                                </a>
-                                <a href="#" class="mega-menu-item">
-                                    <img src="./img/navbar/mega-menu-img/home02.png" alt="home-img" class="img-fluid">
-                                    <span class="item-title">Events Organizer</span>
-                                </a>
-                                <a href="#" class="mega-menu-item">
-                                    <img src="./img/navbar/mega-menu-img/home03.png" alt="home-img" class="img-fluid">
-                                    <span class="item-title">Events Organizer</span>
-                                </a>
-                                <a href="#" class="mega-menu-item">
-                                    <img src="./img/navbar/mega-menu-img/home04.png" alt="home-img" class="img-fluid">
-                                    <span class="item-title">Events Organizer</span>
-                                </a>
-                                <a href="#" class="mega-menu-item">
-                                    <img src="./img/navbar/mega-menu-img/home05.png" alt="home-img" class="img-fluid">
-                                    <span class="item-title">Events Organizer</span>
-                                </a>
-                                <a href="#" class="mega-menu-item">
-                                    <img src="./img/navbar/mega-menu-img/home06.png" alt="home-img" class="img-fluid">
-                                    <span class="item-title">Events Organizer</span>
-                                </a>
-                                <a href="#" class="mega-menu-item">
-                                    <img src="./img/navbar/mega-menu-img/home01.png" alt="home-img" class="img-fluid">
-                                    <span class="item-title">Events Organizer</span>
-                                </a>
-                                <a href="#" class="mega-menu-item">
-                                    <img src="./img/navbar/mega-menu-img/home02.png" alt="home-img" class="img-fluid">
-                                    <span class="item-title">Events Organizer</span>
-                                </a>
-                                <a href="#" class="mega-menu-item">
-                                    <img src="./img/navbar/mega-menu-img/home03.png" alt="home-img" class="img-fluid">
-                                    <span class="item-title">Events Organizer</span>
-                                </a>
-                                <a href="#" class="mega-menu-item">
-                                    <img src="./img/navbar/mega-menu-img/home04.png" alt="home-img" class="img-fluid">
-                                    <span class="item-title">Events Organizer</span>
-                                </a>
-                                <a href="#" class="mega-menu-item">
-                                    <img src="./img/navbar/mega-menu-img/home05.png" alt="home-img" class="img-fluid">
-                                    <span class="item-title">Events Organizer</span>
-                                </a>
-                                <a href="#" class="mega-menu-item">
-                                    <img src="./img/navbar/mega-menu-img/home06.png" alt="home-img" class="img-fluid">
-                                    <span class="item-title">Events Organizer</span>
-                                </a>
-                            </div>
-                        </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Advertise
+                        <a class="nav-link" href="#" onclick="subNavToggler('advertise')">Advertise
                             <span id="dropdown-btn"><i class="fa-solid fa-angle-down"></i></span>
                         </a>
                         <!-- drop-down-menu -->
-                        <div class="dropdown-nav" id="dropdown-nav">
+                        <div class="dropdown-nav" id="advertise">
                             <ul class="nav-menu">
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">Facebook Marketing</i></a>
@@ -110,12 +74,12 @@
                                     <a class="nav-link" href="#">SEO (On Page)</i></a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">
+                                    <a class="nav-link" href="#" onclick="subNavToggler('emailMarketing')">
                                         Email Marketing
                                         <span><i class="fa-solid fa-angle-down"></i></span>
                                     </a>
                                     <!-- Dropdown to Dropdown Menu -->
-                                    <div class="dropdown-nav">
+                                    <div class="dropdown-nav" id="emailMarketing">
                                         <ul class="nav-menu">
                                             <li class="nav-item">
                                                 <a class="nav-link" href="#">Email Template</a>
@@ -142,7 +106,7 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Supports <i class="fa-solid fa-angle-down"></i></a>
+                        <a class="nav-link" href="#">Supports</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Contact</a>
@@ -212,42 +176,16 @@
     <!-- Banner Section Start -->
     <div class="banner position-relative text-center">
         <div class="container">
-            <div class="slider-hero">
-                <div class="hero-slider-item">
-                    <div class="header-section">
-                        <h1 class="banner-heading">Top all-feature Digital Products To Explore</h1>
-                        <p class="banner-peragraph">Get your blood tests delivered at let home collect sample from the
-                            victory
-                            of the managments that supplies
-                            best design system guidelines ever.</p>
-                        <a href="#" class="banner-btn btn">Explore</a>
-                    </div>
-                </div>
-                <div class="hero-slider-item">
-                    <div class="header-section">
-                        <h1 class="banner-heading">Top all-feature Digital Products To Explore</h1>
-                        <p class="banner-peragraph">Get your blood tests delivered at let home collect sample from the
-                            victory
-                            of the managments that supplies
-                            best design system guidelines ever.</p>
-                        <a href="#" class="banner-btn btn">Explore</a>
-                    </div>
-                </div>
-                <div class="hero-slider-item">
-                    <div class="header-section">
-                        <h1 class="banner-heading">Top all-feature Digital Products To Explore</h1>
-                        <p class="banner-peragraph">Get your blood tests delivered at let home collect sample from the
-                            victory
-                            of the managments that supplies
-                            best design system guidelines ever.</p>
-                        <a href="#" class="banner-btn btn">Explore</a>
-                    </div>
-                </div>
+            <div class="header-section">
+                <h1 class="banner-heading">Top all-feature Digital Products To Explore</h1>
+                <p class="banner-peragraph">Get your blood tests delivered at let home collect sample from the
+                    victory
+                    of the managments that supplies
+                    best design system guidelines ever.</p>
+                <a href="#" class="banner-btn btn">Explore</a>
             </div>
             <div class="img-section">
                 <img src="./img/banner/banner-img.png" alt="Banner Image" class="banner-img img-fluid">
-                <!-- <img src="./img/banner/shape-left.svg" alt="Left Shape" class="left-shape position-absolute">
-                <img src="./img/banner/shape-right.svg" alt="Left Shape" class="right-shape position-absolute"> -->
             </div>
         </div>
     </div>
@@ -302,8 +240,7 @@
                     </div>
                     <div class="card-content">
                         <h5 class="card-title">Customer Support</h5>
-                        <p class="card-peragraph">Get your blood tests delivered at home collect a sample from the your
-                            blood tests.</p>
+                        <p class="card-peragraph">Get your blood tests delivered at home collect a sample from the your tests.</p>
                     </div>
                 </div>
             </div>
@@ -315,10 +252,10 @@
     <!-- Services Section Start -->
     <div class="services pt-180">
         <div class="container">
-            <div class="row">
-                <div class="col-xl-7 col-md-7 col-xxl-7">
+            <div class="row align-items-center lg:align-items-start">
+                <div class="col-xl-7 col-md-6 col-xxl-7">
                     <!-- Service Section -->
-                    <div class="content-section position-relative">
+                    <div class="content-section position-relative text-center lg-text-left">
                         <img src="./img/service/service-img.png" alt="Service Img" class="service-img img-fluid">
                         <a class="service-video" data-autoplay="true" data-vbtype="video"
                             href="https://www.youtube.com/watch?v=NrmMk1Myrxc&ab_channel=amazon">
@@ -330,7 +267,7 @@
                         <img src="./img/service/bg-shape.svg" alt="Shape" class="bg-shape position-absolute">
                     </div>
                 </div> <!-- ./ col-xl-7 -->
-                <div class="col-xl-5 col-md-5 col-xxl-5">
+                <div class="col-xl-5 col-md-6 col-xxl-5">
                     <div class="text-section">
                         <h3 class="sub-heading">our services</h3>
                         <h2 class="heading">Business Goals Achieved with Design</h2>
@@ -467,7 +404,7 @@
             </div>
             <!-- card-section -->
             <div class="card-section row">
-                <div class="col-xl-3 col-sm-6">
+                <div class="col-lg-3 col-sm-6">
                     <!-- How works card -->
                     <div class="how-works-card position-relative">
                         <div class="card-number d-flex justify-content-center align-items-center">
@@ -484,7 +421,7 @@
                         </div>
                     </div>
                 </div> <!-- ./ col-xl-3 -->
-                <div class="col-xl-3 col-sm-6">
+                <div class="col-lg-3 col-sm-6">
                     <!-- How works card -->
                     <div class="how-works-card position-relative">
                         <div class="card-number d-flex justify-content-center align-items-center">
@@ -501,7 +438,7 @@
                         </div>
                     </div>
                 </div> <!-- ./ col-xl-3 -->
-                <div class="col-xl-3 col-sm-6">
+                <div class="col-lg-3 col-sm-6">
                     <!-- How works card -->
                     <div class="how-works-card position-relative">
                         <div class="card-number d-flex justify-content-center align-items-center">
@@ -518,7 +455,7 @@
                         </div>
                     </div>
                 </div> <!-- ./ col-xl-3 -->
-                <div class="col-xl-3 col-sm-6">
+                <div class="col-lg-3 col-sm-6">
                     <!-- How works card -->
                     <div class="how-works-card position-relative">
                         <div class="card-number d-flex justify-content-center align-items-center">
@@ -559,7 +496,6 @@
                     <div id="monthly-plan" class="plan-catagory show-plan-card">
                         <!-- Card Section -->
                         <div class="card-section row pricing-slider">
-                            <div class="col-lg-4 g-0 col-xl-4 col-md-6">
                                 <!-- price Card -->
                                 <div class="price-card">
                                     <h5 class="card-title">Free Plan</h5>
@@ -587,8 +523,6 @@
                                         <button class="btn">Start free trail</button>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-4 g-0 col-xl-4 col-md-6">
                                 <!-- price Card -->
                                 <div class="price-card">
                                     <h5 class="card-title">Business king</h5>
@@ -619,8 +553,6 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-4 g-0 col-xl-4 col-md-6">
                                 <!-- price Card -->
                                 <div class="price-card">
                                     <h5 class="card-title">Pro Master</h5>
@@ -653,7 +585,6 @@
                                     <span class="card-badge"><img src="./img/pricing/crown.svg" alt="Crown">
                                         Suggested</span>
                                 </div>
-                            </div>
                         </div>
                     </div>
                     <!-- Annual Plan -->
@@ -1278,15 +1209,22 @@
     </div>
     <!-- Footer section End -->
 
+    <!-- Back top Button -->
+    <button id="backTopBtn">
+        <span>
+            <i class="fa-solid fa-angle-up"></i>
+        </span>
+    </button>
+
 
     <!-- Jquery Min JS -->
-    <script src="./js/jquery.slim.min.js"></script>
+    <script src="./js/vendor/jquery-3.6.4.min.js"></script>
     <!-- Slick Slider Min JS -->
-    <script src="./js/slick.min.js"></script>
+    <script src="./js/vendor/slick.min.js"></script>
     <!-- Bootstrap JS -->
-    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="./js/vendor/bootstrap.bundle.js"></script>
     <!-- Venu Box JS -->
-    <script src="./js/venobox.min.js"></script>
+    <script src="./js/vendor/venobox.min.js"></script>
     <!-- Coustom JS -->
     <script src="./js/custom.js"></script>
 </body>

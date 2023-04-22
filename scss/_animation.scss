@@ -1,0 +1,17 @@
+@keyframes preloader{
+    to{
+        transform: rotateY(0);
+        -webkit-transform: rotateY(0deg);
+        -moz-transform: rotateY(0);
+        -ms-transform: rotateY(0);
+        -o-transform: rotateY(0);
+    }
+
+    from{
+        transform: rotateY(180deg);
+        -webkit-transform: rotateY(180deg);
+        -moz-transform: rotateY(180deg);
+        -ms-transform: rotateY(180deg);
+        -o-transform: rotateY(180deg);
+}
+}
