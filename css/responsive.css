@@ -781,6 +781,12 @@
     .position-absolute {
         display: none;
     }
+
+    /* pricing section */
+    .pricing .plan-catagory .card-section .price-card .btn {
+
+        padding: 1.2rem 3rem;
+    }
     /* Team Section */
 
     .team .team-card {
