@@ -1,13 +1,9 @@
 const docBody = document.getElementById('doc-body')
 
 
-// Preloader 
-// $(window).load(function() {
-//   $('#prloader').fadeOut(100);
-// });
 
 $(window).on('load', function() {
-  $('#prloader').delay(1000).fadeOut('slow', function() {
+  $('#prloader').delay(1500).fadeOut('slow', function() {
     $(this).remove();
   });
 });

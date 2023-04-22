@@ -129,6 +129,7 @@ a, a:hover {
   bottom: 0;
   background-color: #E5ECF4;
   z-index: 10000;
+  overflow: hidden;
 }
 #prloader .prloader-list li {
   margin: 0 0.2rem;
